@@ -1,0 +1,70 @@
+Tina version 3.7.0 -- 01/11/22 -- LAAS/CNRS
+
+mode -R
+
+INPUT NET ------------------------------------------------------- 
+
+parsed net test2
+
+7 places, 7 transitions, 15 arcs
+
+net test2
+tr T1 P1  -> P2 
+tr T2 P2  -> P3 P4 
+tr T3 P4  -> P5 
+tr T4 P5  -> P6 
+tr T5 P6  -> P7 
+tr T6 P7  -> P1 
+tr T7 P3  -> P6 
+pl P1 (1)
+
+0.000s
+
+REACHABILITY ANALYSIS ------------------------------------------- 
+
+net unbounded
+
+unbounded places include: P4 
+
+path from 0 to 11 increases marking
+
+12 marking(s), 14 transition(s)
+
+MARKINGS:
+
+0 : P1
+1 : P2
+2 : P3 P4
+3 : P3 P5
+4 : P4 P6
+5 : P3 P6
+6 : P5 P6
+7 : P4 P7
+8 : P3 P7
+9 : P6*2
+10 : P5 P7
+11 : P1 P4
+
+REACHABILITY GRAPH:
+
+0 -> T1/1
+1 -> T2/2
+2 -> T3/3, T7/4
+3 -> T4/5, T7/6
+4 -> T3/6, T5/7
+5 -> T5/8, T7/9
+6 -> T4/9, T5/10
+7 -> T3/10, T6/11
+8 -> 
+9 -> 
+10 -> 
+11 -> 
+
+0.000s
+
+LIVENESS ANALYSIS ----------------------------------------------- 
+
+enumeration not completed
+
+ANALYSIS COMPLETED ---------------------------------------------- 
+
